@@ -22,7 +22,8 @@ Personalized restaurant recommendations powered by **Neural Collaborative Filter
 ## 🔎 Overview
 - **Goal:** deliver relevant, personalized restaurant suggestions.
 - **Core model:** **NCF** trained on user–item interactions (ratings).
-- **Hybrid research path:** combine NCF predictions with **BERT-based** sentiment of reviews to promote consistently well-reviewed places.
+- **Hybrid :** combine NCF predictions with
+- **BERT-based** sentiment of reviews to promote consistently well-reviewed places.
 - **Interfaces**
   - **API (FastAPI):** online NCF recommendations with *category* and *city* filters; review submission endpoint.
   - **UI (Streamlit):** quick demo to fetch recommendations and post reviews.
@@ -31,23 +32,15 @@ Personalized restaurant recommendations powered by **Neural Collaborative Filter
 
 ## 🧪 Pipeline
 
-```mermaid
 flowchart LR
-A[Data Sources
-ratings + reviews + restaurants] --> B[Preprocess & Clean
-NA/dupes, types]
-B --> C[Encode IDs
-LabelEncoder (user, item)]
-C --> D[Train NCF
-PyTorch; save state_dict]
-D --> E[Evaluate
-MSE / RMSE / Accuracy]
-E --> F[Serve via FastAPI
-/recommend, /review]
-C --> G[(BERT Sentiment)
-DistilBERT SST-2]
-G --> H[Hybrid Scoring
-0.7*NCF + 0.3*Sentiment]
+A["Data Sources<br/>ratings + reviews + restaurants"] --> B["Preprocess & Clean<br/>NA/dupes, types"]
+B --> C["Encode IDs<br/>LabelEncoder user & item"]
+C --> D["Train NCF<br/>PyTorch; save state_dict"]
+D --> E["Evaluate<br/>MSE / RMSE / Accuracy"]
+E --> F["Serve via FastAPI<br/>/recommend, /review"]
+C --> G["BERT Sentiment<br/>DistilBERT SST-2"]
+G --> H["Hybrid Scoring<br/>0.7× NCF + 0.3× Sentiment"]
+
 ```
 
 **Steps**
@@ -85,7 +78,6 @@ The dataset was assembled from **multiple sources** and **partly generated** for
 | **Test RMSE** | `0.0842` |
 | **Test Accuracy** | `99.57%` |
 
-> Ratings returned by the API are normalized to **[1, 5]** for clarity in the UI.
 
 ---
 
@@ -179,27 +171,6 @@ streamlit run streamlit_app.py --server.address=0.0.0.0 --server.port=8501
 
 ---
 
-## 📁 Suggested Structure
-```
-DALEEL/
-├─ app.py                     # FastAPI (NCF)
-├─ streamlit_app.py           # Streamlit UI
-├─ ncf_model_class.py         # NCF architecture
-├─ models/
-│  ├─ ncf_weights.pth
-│  ├─ user_encoder.pkl
-│  └─ restaurant_encoder.pkl
-├─ data/
-│  ├─ ratings_encoded.csv
-│  ├─ restaurants_processed.csv
-│  └─ reviews_processed.csv
-├─ assets/
-│  └─ demo*.jpg
-└─ requirements.txt
-```
-
----
-
 <div align="center">
-Made with ❤️ by the DALEEL team — combining **deep learning** and **NLP** to make dining choices smarter.
+Made with ❤️ 
 </div>
