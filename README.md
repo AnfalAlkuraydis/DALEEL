@@ -32,14 +32,16 @@ Personalized restaurant recommendations powered by **Neural Collaborative Filter
 
 ## 🧪 Pipeline
 
+```mermaid
 flowchart LR
-A["Data Sources<br/>ratings + reviews + restaurants"] --> B["Preprocess & Clean<br/>NA/dupes, types"]
-B --> C["Encode IDs<br/>LabelEncoder user & item"]
-C --> D["Train NCF<br/>PyTorch; save state_dict"]
-D --> E["Evaluate<br/>MSE / RMSE / Accuracy"]
-E --> F["Serve via FastAPI<br/>/recommend, /review"]
-C --> G["BERT Sentiment<br/>DistilBERT SST-2"]
-G --> H["Hybrid Scoring<br/>0.7× NCF + 0.3× Sentiment"]
+  A["Data Sources<br/>ratings + reviews + restaurants"] --> B["Preprocess & Clean<br/>NA/dupes, types"]
+  B --> C["Encode IDs<br/>LabelEncoder user & item"]
+  C --> D["Train NCF<br/>PyTorch; save state_dict"]
+  D --> E["Evaluate<br/>MSE / RMSE / Accuracy"]
+  E --> F["Serve via FastAPI<br/>/recommend, /review"]
+  C --> G["BERT Sentiment<br/>DistilBERT SST-2"]
+  G --> H["Hybrid Scoring<br/>0.7× NCF + 0.3× Sentiment"]
+
 
 ```
 
