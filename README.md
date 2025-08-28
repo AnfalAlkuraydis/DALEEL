@@ -125,19 +125,6 @@ python -m venv .venv
 source .venv/bin/activate
 
 pip install -r requirements.txt
-```
-
-### Prepare Artifacts
-Place or point env vars to processed CSVs, encoders, and weights:
-
-```bash
-export RATINGS_PATH=data/ratings_encoded.csv
-export RESTAURANTS_PATH=data/restaurants_processed.csv
-export REVIEWS_PATH=data/reviews_processed.csv
-export USER_ENCODER_PATH=models/user_encoder.pkl
-export REST_ENCODER_PATH=models/restaurant_encoder.pkl
-export NCF_WEIGHTS_PATH=models/ncf_weights.pth
-```
 
 ---
 
