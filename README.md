@@ -98,10 +98,8 @@ The dataset was assembled from **multiple sources** and **partly generated** for
 1) **NCF + BERT (offline / hard-coded hybrid)**  
    - Uses a pre-trained **DistilBERT** sentiment classifier (SST‑2) on reviews.  
    - Aggregates per-restaurant sentiment (mean of {NEG=0, POS=1}).  
-   - Blends with NCF:  
-     $$
-      \text{HybridScore} = 0.7 \times \text{NCF} + 0.3 \times \text{Sentiment}
-     $$
+   - Blends with NCF: $\text{HybridScore} = 0.7 \times \text{NCF} + 0.3 \times \text{Sentiment}$
+
    - **Why BERT?** It captures nuance from natural-language reviews (tone, polarity, context) that raw ratings may miss.
 
 2) **NCF-only API (production path)**  
