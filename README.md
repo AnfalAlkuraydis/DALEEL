@@ -128,6 +128,7 @@ pip install -r requirements.txt
 
 ---
 
-<div align="center">
+---
+<div>
 Made with ❤️ 
 </div>
