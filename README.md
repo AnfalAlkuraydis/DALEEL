@@ -99,7 +99,9 @@ The dataset was assembled from **multiple sources** and **partly generated** for
    - Uses a pre-trained **DistilBERT** sentiment classifier (SST‑2) on reviews.  
    - Aggregates per-restaurant sentiment (mean of {NEG=0, POS=1}).  
    - Blends with NCF:  
-     \[ \text{HybridScore} = 0.7\times\text{NCF} + 0.3\times\text{Sentiment} \]
+     $$
+      \text{HybridScore} = 0.7 \times \text{NCF} + 0.3 \times \text{Sentiment}
+     $$
    - **Why BERT?** It captures nuance from natural-language reviews (tone, polarity, context) that raw ratings may miss.
 
 2) **NCF-only API (production path)**  
@@ -137,38 +139,6 @@ export REVIEWS_PATH=data/reviews_processed.csv
 export USER_ENCODER_PATH=models/user_encoder.pkl
 export REST_ENCODER_PATH=models/restaurant_encoder.pkl
 export NCF_WEIGHTS_PATH=models/ncf_weights.pth
-```
-
----
-
-## 🚀 Run
-
-### FastAPI (API)
-```bash
-uvicorn app:app --host 0.0.0.0 --port 8000
-```
-
-**Endpoints**  
-`POST /recommend`
-```json
-{
-  "user_id": "U1077",
-  "category": "all",
-  "city": "all"
-}
-```
-`POST /review`
-```json
-{
-  "user_id": "U1077",
-  "review_restid": "135082",
-  "new_review": "Great food and fast service!"
-}
-```
-
-### Streamlit (UI)
-```bash
-streamlit run streamlit_app.py --server.address=0.0.0.0 --server.port=8501
 ```
 
 ---
