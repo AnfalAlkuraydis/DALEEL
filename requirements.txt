@@ -1,0 +1,23 @@
+# SmartApps / Daleel - requirements.txt
+# Install with: pip install -r requirements.txt
+
+# API & web
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+requests>=2.31.0
+streamlit>=1.29.0
+
+# Core data science
+numpy>=1.23.0
+pandas>=2.0.0
+scikit-learn>=1.2.0
+joblib>=1.3.0
+matplotlib>=3.7.0
+
+# ML / DL
+torch
+transformers>=4.36.0
+
+# Colab/Notebook helpers (optional; safe to remove if not using notebooks/ngrok)
+nest-asyncio>=1.5.0
+pyngrok>=7.0.0
