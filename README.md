@@ -85,11 +85,11 @@ The dataset was assembled from **multiple sources** and **partly generated** for
 
 ## 🎬 Demo
 <p align="center">
-  <img src="https://github.com/AnfalAlkuraydis/DALEEL/blob/main/assets/demo2.jpg" width="47%" />
-  <img src="https://github.com/AnfalAlkuraydis/DALEEL/blob/main/assets/demo3.jpg" width="47%" />
+  <img src="https://github.com/AnfalAlkuraydis/Daleel-app/blob/main/assets/demo2.jpg" width="47%" />
+  <img src="https://github.com/AnfalAlkuraydis/Daleel-app/blob/main/assets/demo3.jpg" width="47%" />
 </p>
 <p align="center">
-  <img src="https://github.com/AnfalAlkuraydis/DALEEL/blob/main/assets/demo1.jpg" width="96%" />
+  <img src="https://github.com/AnfalAlkuraydis/Daleel-app/blob/main/assets/demo1.jpg" width="96%" />
 </p>
 
 ---
