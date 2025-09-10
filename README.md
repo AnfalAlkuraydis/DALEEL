@@ -111,25 +111,7 @@ The dataset was assembled from **multiple sources** and **partly generated** for
 
 ---
 
-## ⚙️ Installation
 
-```bash
-git clone https://github.com/AnfalAlkuraydis/DALEEL.git
-cd DALEEL
-
-# (optional) virtual env
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
-source .venv/bin/activate
-
-pip install -r requirements.txt
-
-```
-
-
----
 <div>
 Made with ❤️ 
 </div>
